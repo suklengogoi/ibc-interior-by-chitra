@@ -641,6 +641,8 @@
 
   return {
     go: function (i) { load(i, true); },
+    yaw: function () { return state.yaw; },
+    setSpin: function (on) { state.spin = !!on; },
     relayout: relayout,
     current: function () { return state.room; }
   };

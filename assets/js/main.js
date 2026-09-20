@@ -175,16 +175,16 @@
       count.textContent = n + (scope === 'draw' ? ' renders' : ' photographs');
     }
 
-    grid.hidden = true;
     panel.hidden = false;
+    doc.body.classList.add('folder-open');
+    void panel.offsetHeight;          // let the start state paint before animating
+    panel.classList.add('is-in');
     $$('.fcard[data-scope="' + scope + '"]').forEach(function (c) {
       c.setAttribute('aria-expanded', c === card ? 'true' : 'false');
     });
     refreshVisible();
 
     if (!reduced && panel.animate) {
-      panel.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }],
-                    { duration: 460, easing: 'cubic-bezier(.16,.84,.32,1)' });
       if (body) {
         $$('figure', body).forEach(function (fig, i) {
           fig.animate([{ opacity: 0, transform: 'translateY(18px) scale(.97)' },
@@ -203,9 +203,13 @@
     if (!grid || !panel) return;
     var openCard = $('.fcard[data-scope="' + scope + '"][aria-expanded="true"]');
 
-    panel.hidden = true;
-    bodiesFor(scope).forEach(function (bd) { bd.hidden = true; });
-    grid.hidden = false;
+    panel.classList.remove('is-in');
+    doc.body.classList.remove('folder-open');
+    var finish = function () {
+      panel.hidden = true;
+      bodiesFor(scope).forEach(function (bd) { bd.hidden = true; });
+    };
+    if (reduced) finish(); else setTimeout(finish, 420);
     $$('.fcard[data-scope="' + scope + '"]').forEach(function (c) {
       c.setAttribute('aria-expanded', 'false');
     });
@@ -220,18 +224,11 @@
         try { window.scrollTo({ top: y, behavior: 'instant' }); }
         catch (e) { window.scrollTo(0, y); }
       };
-      void grid.offsetHeight;
       jump();
       requestAnimationFrame(function () { jump(); });
     }
 
-    if (!reduced && grid.animate) {
-      $$('.fcard[data-scope="' + scope + '"]').forEach(function (c, i) {
-        c.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }],
-                  { duration: 440, delay: Math.min(i, 6) * 45,
-                    easing: 'cubic-bezier(.16,.84,.32,1)', fill: 'backwards' });
-      });
-    }
+
     if (openCard) openCard.focus({ preventScroll: true });
   }
 

@@ -1,0 +1,65 @@
+IBC Selected Work folder structure
+
+living-room/
+  - lrmk-media-wall.webp
+  - lrmk-media-wall-sm.webp
+  - lrmk-stone-feature.webp
+  - lrmk-stone-feature-sm.webp
+  - lrmk-living-long.webp
+  - lrmk-living-long-sm.webp
+  - lrmk-layered-ceiling.webp
+  - lrmk-layered-ceiling-sm.webp
+  - lr-1.webp
+  - lr-1-sm.webp
+  - lr-2.webp
+  - lr-2-sm.webp
+  - lr-3.webp
+  - lr-3-sm.webp
+  - lr-4.webp
+  - lr-4-sm.webp
+  - lr-5.webp
+  - lr-5-sm.webp
+
+modular-kitchen/
+  - lrmk-kitchen-run.webp
+  - lrmk-kitchen-run-sm.webp
+  - lrmk-kitchen-vanity.webp
+  - lrmk-kitchen-vanity-sm.webp
+  - mk-1.webp
+  - mk-1-sm.webp
+  - mk-2.webp
+  - mk-2-sm.webp
+  - mk-3.webp
+  - mk-3-sm.webp
+  - mk-4.webp
+  - mk-4-sm.webp
+
+bathrooms/
+  - bath-marble-vanity.webp
+  - bath-marble-vanity-sm.webp
+  - bath-oval-mirror.webp
+  - bath-oval-mirror-sm.webp
+
+wardrobes/
+  - wardrobe-amber-glass.webp
+  - wardrobe-amber-glass-sm.webp
+  - wardrobe-tall-units.webp
+  - wardrobe-tall-units-sm.webp
+  - wardrobe-study-wall.webp
+  - wardrobe-study-wall-sm.webp
+  - wardrobe-desk-amber.webp
+  - wardrobe-desk-amber-sm.webp
+
+shelving/
+  - shelf-floating-niche.webp
+  - shelf-floating-niche-sm.webp
+  - shelf-display-fluted.webp
+  - shelf-display-fluted-sm.webp
+
+ongoing-work/
+  - ongoing-open-bench.webp
+  - ongoing-open-bench-sm.webp
+  - ongoing-corner-joinery.webp
+  - ongoing-corner-joinery-sm.webp
+  - ongoing-timber-partition.webp
+  - ongoing-timber-partition-sm.webp

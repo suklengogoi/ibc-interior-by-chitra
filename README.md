@@ -18,14 +18,13 @@ on any shared host, and by double-clicking `index.html` straight off the disk.
 | Hero | **A live, draggable 360° of a finished room.** The visitor is standing inside the work from the first second; room chips along the bottom switch which room they are in. Headline rises line by line, two CTAs, hairline frame, film grain and a scroll cue. Falls back to a still image when JavaScript is off |
 | Marquee | Continuous strip of the studio's services |
 | 01 The Studio | Studio intro with an asymmetric image pair and four verified facts |
-| 02 Selected Work | 16 real project photographs in five **folder cards** (Kitchens 3, Bathrooms 3, Storage 5, Ceilings 3, Living 2). Each card is a stack of photographs; clicking opens that folder in place with staggered tiles, and "All folders" returns you to the exact scroll position you left. Keyboard accessible, Escape closes. Keyboard-accessible lightbox inside |
+| 02 Selected Work | 26 images in six **folder cards** — Living Room 9, Modular Kitchen 6, Bathrooms 2, Wardrobes 4, Shelving 2, Ongoing Work 3. Each card is a stack of photographs; clicking opens that folder as a **full-screen page** that slides up over the site, with the page behind locked. "All folders" closes it and returns you to the exact scroll position you left. Keyboard accessible, Escape closes. Lightbox works inside |
 | 03 Step Inside | **The 360° room tour** — two rooms, drag to look around (see §3), plus a companion bathroom walkthrough video |
 | 04 Services | Accordion of the five services, with a hover preview image on desktop |
 | 05 Process | The studio's own five-stage process |
 | 06 On Site | Four walkthrough reels, MP4 + WebM, played only when scrolled into view |
-| 07 The drawing board | Nine of the studio's own design renders in two **folder cards** — Living Room (5) and Modular Kitchen (4) — opening the same way, each tagged "Render", with a link across to the matching 360 room |
-| 08 Voices | Three client testimonials (paraphrased — see §6) |
-| 09 Contact | Enquiry form that opens WhatsApp or email with the message pre-written |
+| 07 Voices | Three client testimonials (paraphrased — see §6) |
+| 08 Contact | Enquiry form that opens WhatsApp or email with the message pre-written |
 | Everywhere | Sticky header that hides on scroll-down, full-screen mobile menu, floating WhatsApp button, custom cursor on desktop, preloader that skips on repeat visits, 404 page |
 
 Accessibility: skip link, visible focus rings, ARIA on the tabs/accordion/dialog/viewer, full keyboard
@@ -149,7 +148,7 @@ For a custom domain, add it under Settings → Pages → Custom domain, then upd
 - Email `Chitraranjanneog38@gmail.com` — the `mailto:` links, the JSON-LD, and `EMAIL` in `main.js`
 - Instagram / Facebook / Maps links — header menu, contact block, footer, JSON-LD
 
-**Folders.** Both the work and drawing-board sections are built from folder cards. The markup is a
+**Folders.** The work section is built from folder cards. The markup is a
 `.fgrid` of `.fcard` buttons plus a hidden `.fopen` panel containing one `.fbody` per folder;
 `assets/js/main.js` toggles them and restores the scroll position on close. Adding a category means
 adding a card and a matching `.fbody`.
@@ -213,7 +212,22 @@ update the `@font-face` blocks.
 
 ---
 
-## 8. The bathroom walkthrough
+## 8. Portfolio organisation
+
+Every one of the 26 source files has exactly one destination. The selected-work assets are physically organised into room-based folders under `assets/img/work/`, and the website folder cards match that structure.
+
+| Folder | Count | Contents |
+|---|---:|---|
+| Living Room | 9 | The living-room completed views plus LR-1 through LR-5 |
+| Modular Kitchen | 6 | The kitchen completed views plus MK-1 through MK-4 |
+| Bathrooms | 2 | Vanity and mirror views |
+| Wardrobes | 4 | Fitted wardrobe and study-wall views |
+| Shelving | 2 | Completed shelving and display-unit views |
+| Ongoing Work | 3 | Joinery photographed during execution |
+
+The Living Room and Modular Kitchen are intentionally separate portfolio folders. The three unfinished joinery photographs remain in *Ongoing Work* so that execution-stage work is not mixed with finished interiors.
+
+## 9. The bathroom walkthrough
 
 The short clip in *Step inside* was generated from one of the studio's own site photographs of a
 marble bathroom, so the room shown is one that was actually built. It carried a visible Gemini
@@ -230,7 +244,7 @@ Two things to be aware of before publishing:
 
 The clip is labelled "Animated from a site photograph" on the page.
 
-## 9. A note on image metadata
+## 10. A note on image metadata
 
 The panorama source files Runway produced carry IPTC and XMP metadata identifying them as AI
 generated. Re-encoding them to WebP for the web dropped that metadata, so the shipped files no
@@ -238,14 +252,12 @@ longer carry it — a side effect of the conversion, not a deliberate removal. T
 matters is on the page itself: both panoramas are labelled as visualisations in the hero, on the
 viewer, and in the tour copy. Keep the original PNGs if you want the provenance preserved.
 
-## 10. Honesty notes
+## 11. Honesty notes
 
 Everything on this site is real, and the few things that are not photographs say so:
 
 - The **360 panoramas** are genuine photographs of completed IBC projects, rebuilt from the studio's
   own walkthrough video. Nothing is AI-generated.
-- **The drawing board** shows the studio's own design renders for schemes it has built, tagged
-  *Render*. They are not concepts for imaginary projects.
 - The two **360 panoramas** are generated visualisations of rooms from the studio's own render set.
   They are labelled as visualisations in three places on the page.
 - The **testimonials** are labelled *paraphrased*, with a visible note to replace them.
@@ -257,7 +269,7 @@ Everything on this site is real, and the few things that are not photographs say
 
 ---
 
-## 11. Testing done
+## 12. Testing done
 
 Playwright / Chromium, over both a local HTTP server and `file://`, at every one of these sizes:
 
