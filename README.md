@@ -23,8 +23,7 @@ on any shared host, and by double-clicking `index.html` straight off the disk.
 | 04 Services | Accordion of the five services, with a hover preview image on desktop |
 | 05 Process | The studio's own five-stage process |
 | 06 On Site | Four walkthrough reels, MP4 + WebM, played only when scrolled into view |
-| 07 Voices | Three client testimonials (paraphrased — see §6) |
-| 08 Contact | Enquiry form that opens WhatsApp or email with the message pre-written |
+| 07 Contact | Enquiry form that opens WhatsApp or email with the message pre-written |
 | Everywhere | Sticky header that hides on scroll-down, full-screen mobile menu, floating WhatsApp button, custom cursor on desktop, preloader that skips on repeat visits, 404 page |
 
 Accessibility: skip link, visible focus rings, ARIA on the tabs/accordion/dialog/viewer, full keyboard
@@ -201,9 +200,6 @@ update the `@font-face` blocks.
 - [ ] **Add the street address and opening hours.** The JSON-LD currently carries only
       Tezpur / Assam / IN, because no verified street address or hours were available. Add
       `streetAddress`, `postalCode` and `openingHoursSpecification` once confirmed.
-- [ ] **Replace the testimonials.** The three quotes in *Voices* are paraphrased from the studio's
-      previous website and are labelled "paraphrased" on the page. Swap in approved, attributed
-      quotes and remove the note beneath them.
 - [ ] Check the *Concepts* images are ones the studio is happy to publish; they are labelled
       "design visualisation" so nobody mistakes them for finished rooms.
 - [ ] If Chitra can supply unwatermarked reel footage, re-cut the four videos; two currently carry
