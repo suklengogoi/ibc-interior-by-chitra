@@ -124,7 +124,7 @@ assets/
     work/<room>/        70 images in 7 room folders (full + -sm variants)
     print/              JPEG copies of the same images, used only to build the PDF
     pano/               3 panoramas (full + -preview)
-    studio/             founder portrait
+    studio/             founder portrait (1200x1709 + 702x1000)
   video/                4 reels as MP4 + WebM, each with a WebP poster
 tools/                  scripts that rebuild the portfolio, the PDF and the test matrix
 ```
@@ -151,6 +151,7 @@ For a custom domain, add it under Settings → Pages → Custom domain, then upd
   `assets/js/main.js` (the form uses that one)
 - Email `Chitraranjanneog38@gmail.com` — the `mailto:` links, the JSON-LD, and `EMAIL` in `main.js`
 - Instagram / Facebook / Maps links — header menu, contact block, footer, JSON-LD
+- Studio address — contact block, footer, JSON-LD `address`, and `build_portfolio.py` (contact page)
 
 **Folders.** The work section is built from folder cards. The markup is a
 `.fgrid` of `.fcard` buttons plus a hidden `.fopen` panel containing one `.fbody` per folder;
@@ -202,9 +203,12 @@ update the `@font-face` blocks.
       the old site in the video. If the domain has lapsed or changes, update it in `index.html`
       (`<link rel="canonical">`, the `og:` and `twitter:` tags, and the JSON-LD `url` and `image`),
       `robots.txt` and `sitemap.xml`. `og:image` must stay an **absolute** URL or previews break.
-- [ ] **Add the street address and opening hours.** The JSON-LD currently carries only
-      Tezpur / Assam / IN, because no verified street address or hours were available. Add
-      `streetAddress`, `postalCode` and `openingHoursSpecification` once confirmed.
+- [ ] **Add opening hours, and an exact map pin if one becomes available.** The address
+      (Usha Nagar, Bye Lane 24, Mahabhairab, Tezpur 784001) is shown as text in the contact block,
+      footer, portfolio and JSON-LD. The map is a Google Maps *search* for that address, so it shows
+      the area rather than an exact pin. When the Google Business Profile has a pin, replace the
+      `data-map` URL and the "Open in Google Maps" link in `index.html`, and `hasMap` in the JSON-LD.
+      The embedded map needs an internet connection; the button underneath works either way.
 - [ ] Check the *Concepts* images are ones the studio is happy to publish; they are labelled
       "design visualisation" so nobody mistakes them for finished rooms.
 - [ ] If Chitra can supply unwatermarked reel footage, re-cut the four videos; two currently carry
@@ -289,8 +293,8 @@ Everything on this site is real, and the few things that are not photographs say
 - The **testimonials section was removed** at the client's request rather than carry paraphrased quotes.
 - The **logo** is the studio's real logo, extracted from its own artwork; the favicon is a
   simplified redraw of the same gable mark.
-- The **founder portrait** is Chitra's own photograph, converted to a warm duotone so it sits with
-  the rest of the page. No features were altered.
+- The **founder portrait** is Chitra's own photograph, in full colour. It is cropped, and
+  contrast and sharpening are nudged very slightly; nothing in the photograph is altered.
 - No awards, project counts, years-in-business or client names have been invented anywhere.
 
 ---
@@ -397,3 +401,19 @@ with a WebP poster taken from the middle of the cut.
 
 If he can send the originals rather than WhatsApp copies, they are worth re-cutting: everything
 here arrived at 464×832 or 1024×576, which is why the reels are soft at full width.
+
+---
+
+## 15. The founder photograph
+
+`assets/img/studio/chitra-neog.webp` (1200x1709) and `chitra-neog-sm.webp` (702x1000), cropped
+from a 1792x2390 original. It appears twice: leading the image pair in **01 The Studio** on the
+home page, and on the studio page of the portfolio document.
+
+Both files share the aspect ratio **702:1000**, which is what `index.html` declares in the tag's
+`width`/`height`. If you ever replace this photograph, keep that ratio or update those two
+numbers, or the page will jump as the image loads.
+
+The crop is anchored to the right edge of the frame to drop the exposed brickwork, and starts 7%
+down to lose the unfinished ceiling. It is deliberately not cropped in tighter: it is an
+environmental portrait, and the half-built room around him is the point.

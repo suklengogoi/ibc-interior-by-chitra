@@ -90,6 +90,18 @@ def check_page(pg, page, label, base):
 
 
 def check_index(pg, label):
+    # Section numbers must read 01..n with no repeats. A stale renumbering
+    # line in rebuild_index.py once left two sections both labelled 07, and
+    # nothing caught it because the page still looked and behaved fine.
+    nums = pg.evaluate(
+        "() => [...document.querySelectorAll('.label .num')]"
+        ".map(e => e.textContent.trim()).filter(t => /^[0-9]{2}$/.test(t))")
+    if sorted(nums) != sorted(set(nums)):
+        dupes = sorted({n for n in nums if nums.count(n) > 1})
+        fail(f'{label}: section numbers repeat: {dupes} (all: {nums})')
+    elif nums and nums != [f'{i:02d}' for i in range(1, len(nums) + 1)]:
+        fail(f'{label}: section numbers are not 01..{len(nums):02d}: {nums}')
+
     # hero 360 present and draggable (the drag surface must be on top)
     hit = pg.evaluate("""() => {
         const h = document.querySelector('#hero, .hero');

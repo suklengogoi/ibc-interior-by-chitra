@@ -913,3 +913,17 @@ body.folder-open { overflow: hidden; }
   width: .4em; height: .4em; margin-top: -.2em; border-radius: 50%;
   background: var(--brass);
 }
+
+/* The founder leads the studio image pair. His column is the wider of the
+   two and the image keeps its own aspect rather than being cut to 3:4 — it
+   is an environmental portrait, and cropping in loses the room he is in. */
+.studio__imgs:has(.studio__founder) { grid-template-columns: 1.12fr .88fr; }
+.studio__imgs figure.studio__founder img { aspect-ratio: 702 / 1000; }
+.studio__founder figcaption {
+  margin-top: .9rem; opacity: .7; letter-spacing: .16em; white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .studio__founder figcaption { white-space: normal; }
+}
+
+.map__note { margin: .6rem 0 0; font-size: .78rem; opacity: .6; }

@@ -390,6 +390,17 @@
       es.forEach(function (en) {
         if (!en.isIntersecting) return;
         obs.disconnect();
+        /* Load the embedded map only when it is about to be seen. The button
+           underneath still works if the embed is blocked or offline. */
+        var src = map.getAttribute('data-map');
+        if (src && !map.querySelector('iframe')) {
+          var f = document.createElement('iframe');
+          f.src = src;
+          f.title = 'Map of the studio area — Usha Nagar, Bye Lane 24, Mahabhairab, Tezpur';
+          f.loading = 'lazy';
+          f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+          map.appendChild(f);
+        }
       });
     }, { rootMargin: '250px' }).observe(map);
   }

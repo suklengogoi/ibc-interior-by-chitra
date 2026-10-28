@@ -17,7 +17,6 @@ man = json.load(open(_os.path.join(_HERE, 'manifest.json')))
 PHONE, WA = '9365333187', '919365333187'
 EMAIL = 'Chitraranjanneog38@gmail.com'
 IG = 'https://www.instagram.com/interiorbychitra'
-MAPS = 'https://maps.app.goo.gl/HRc3474RMWvV86uP8'
 
 SECTIONS = [
     ('living-room', 'Living Room', 'Seating, media walls, feature stone and layered ceilings.'),
@@ -224,7 +223,7 @@ page(f'''<div class="pf-contact">
     <dl class="pf-facts pf-facts--lg">
       <div><dt>Call or WhatsApp</dt><dd>+91 {PHONE}</dd></div>
       <div><dt>Email</dt><dd>{EMAIL}</dd></div>
-      <div><dt>Studio</dt><dd>Tezpur, Sonitpur, Assam, India</dd></div>
+      <div><dt>Studio</dt><dd>Usha Nagar, Bye Lane 24, Mahabhairab<br>Tezpur 784001, Assam</dd></div>
       <div><dt>Instagram</dt><dd>@interiorbychitra</dd></div>
     </dl>
     <p class="pf-note">Every image in this document is IBC&rsquo;s own work &mdash; completed and

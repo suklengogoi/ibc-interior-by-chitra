@@ -108,14 +108,12 @@ if 'id="voices"' in h:
     a = h.rindex('<section', 0, h.index('id="voices"'))
     b = h.index('</section>', a) + len('</section>')
     h = h[:a] + h[b:].lstrip('\n')
-h = h.replace('<span class="num">08</span> — Contact',
-              '<span class="num">07</span> — Contact')
-h = h.replace('<span class="num">08</span> &mdash; Contact',
-              '<span class="num">07</span> &mdash; Contact')
+# (The Voices section was removed long ago and its renumbering line lived on
+# here, quietly pulling Contact back to 07 every time this script ran — which
+# collided with On site once the portfolio section was added. Section numbers
+# are now left exactly as they are in the file.)
 
-# ---- client's exact map location -----------------------------------------
-h = h.replace('https://maps.app.goo.gl/kYUEue5jxnT1ZTCc9',
-              'https://maps.app.goo.gl/HRc3474RMWvV86uP8')
+# (No map link: the exact pinpoint is not available, so the address is shown as text only.)
 
 # ---- section intro: no per-image labelling, just what the section holds ---
 # matches whatever this paragraph currently says, including an earlier run's
@@ -130,9 +128,16 @@ if new_intro not in h:
 # ---- founder photo: use the new portrait and its small variant ------------
 h = h.replace('src="assets/img/studio/chitra-neog.webp"',
               'src="assets/img/studio/chitra-neog-sm.webp"')
-h = re.sub(r'(<img alt="Chitra[^>]*?)width="\d+" height="\d+"', r'\1width="702" height="1000"', h)
-h = re.sub(r'(<img[^>]*chitra-neog-sm\.webp"[^>]*?)/>',
-           r'\1 width="702" height="1000"/>', h)
+# Set the founder photo's dimensions exactly once. The previous version
+# appended a width/height pair on every run, so the tag ended up carrying six
+# of them and the browser sized the image from the first (stale) pair.
+def _fix_founder(m):
+    tag = re.sub(r'\s*(?:width|height)="\d+"', '', m.group(0))
+    return tag.replace('/>', ' width="702" height="1000"/>')
+
+
+h, _n = re.subn(r'<img[^>]*chitra-neog-sm\.webp[^>]*/>', _fix_founder, h)
+assert _n == 1, f'founder photo tag: {_n} matches'
 
 # ---- portfolio page in the navigation ------------------------------------
 # idempotent: only insert if the link is not already there
@@ -187,5 +192,4 @@ for f in ORDER:
         print(f'  {f:16s} {n}')
 print('total tiles:', len(man))
 print('voices removed:', 'id="voices"' not in h)
-print('new map link:', h.count('HRc3474RMWvV86uP8'))
 print('portfolio nav links:', h.count('portfolio.html'))
