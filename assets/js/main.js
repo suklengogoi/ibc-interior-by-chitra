@@ -94,13 +94,16 @@
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
     revs.forEach(function (el) { io.observe(el); });
 
-    // safety sweep: nothing may stay invisible after a fast scroll or #anchor jump
+    // Safety sweep. Anything at or above the fold is revealed, including
+    // everything already scrolled past — a flick down the page or a jump to
+    // an #anchor can skip the observer entirely, and a section that stays
+    // invisible when the visitor scrolls back up is the worst failure on the
+    // page. Revealing past content costs nothing: they have already seen it.
     var sweep = function () {
       var vh = window.innerHeight;
       revs.forEach(function (el) {
         if (el.classList.contains('in')) return;
-        var r = el.getBoundingClientRect();
-        if (r.top < vh * 0.98 && r.bottom > -vh * 0.2) el.classList.add('in');
+        if (el.getBoundingClientRect().top < vh * 0.98) el.classList.add('in');
       });
     };
     window.addEventListener('scroll', sweep, { passive: true });
@@ -108,7 +111,7 @@
     window.addEventListener('hashchange', function () { setTimeout(sweep, 60); });
     window.addEventListener('load', function () { setTimeout(sweep, 120); });
     setTimeout(sweep, 400);
-    setTimeout(showAll, 8000);
+    setTimeout(showAll, 2500);   // last resort, well before anyone notices
   }
 
   /* ---------------------------------------------------------------- hero */
@@ -172,7 +175,9 @@
     if (title) title.textContent = card ? $('.fcard__t', card).textContent : key;
     if (count && body) {
       var n = $$('figure', body).length;
-      count.textContent = n + (scope === 'draw' ? ' renders' : ' photographs');
+      // "images", not "photographs": most folders mix photographs of built
+      // rooms with the studio's own design drawings
+      count.textContent = n + ' images';
     }
 
     panel.hidden = false;

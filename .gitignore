@@ -4,3 +4,7 @@ node_modules/
 *.log
 .vscode/
 .idea/
+# build artefacts: make_pdf.py regenerates these
+assets/img/print/
+*.pyc
+__pycache__/

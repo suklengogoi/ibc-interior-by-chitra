@@ -1,0 +1,632 @@
+[
+ {
+  "slug": "ongoing-kitchen-joinery-under-installation-1",
+  "folder": "ongoing-work",
+  "title": "Kitchen joinery under installation",
+  "kind": "ongoing",
+  "origin": "enhanced#0",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "ongoing-utility-corridor-at-fitting-stage-2",
+  "folder": "ongoing-work",
+  "title": "Utility corridor at fitting stage",
+  "kind": "ongoing",
+  "origin": "enhanced#2",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "ongoing-fluted-door-and-frame-being-fitted-3",
+  "folder": "ongoing-work",
+  "title": "Fluted door and frame being fitted",
+  "kind": "ongoing",
+  "origin": "enhanced#3",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "ongoing-kitchen-cabinetry-being-installed-4",
+  "folder": "ongoing-work",
+  "title": "Kitchen cabinetry being installed",
+  "kind": "ongoing",
+  "origin": "enhanced#5",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "ongoing-living-room-ceiling-under-construction-5",
+  "folder": "ongoing-work",
+  "title": "Living room ceiling under construction",
+  "kind": "ongoing",
+  "origin": "enhanced#6",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "ongoing-kitchen-installation-in-progress-6",
+  "folder": "ongoing-work",
+  "title": "Kitchen installation in progress",
+  "kind": "ongoing",
+  "origin": "enhanced#10",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-dual-tone-kitchen-with-stone-counter-1",
+  "folder": "modular-kitchen",
+  "title": "Dual-tone kitchen with stone counter",
+  "kind": "photo",
+  "origin": "enhanced#11",
+  "w": 1800,
+  "h": 1508
+ },
+ {
+  "slug": "bathrooms-dark-marble-bath-with-sunken-tub-1",
+  "folder": "bathrooms",
+  "title": "Dark marble bath with sunken tub",
+  "kind": "photo",
+  "origin": "enhanced#12",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "bathrooms-marble-bath-tub-and-shower-2",
+  "folder": "bathrooms",
+  "title": "Marble bath, tub and shower",
+  "kind": "photo",
+  "origin": "enhanced#13",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "ongoing-wardrobe-carcass-and-dressing-unit-7",
+  "folder": "ongoing-work",
+  "title": "Wardrobe carcass and dressing unit",
+  "kind": "ongoing",
+  "origin": "enhanced#14",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "shelving-open-shelving-with-study-bench-1",
+  "folder": "shelving",
+  "title": "Open shelving with study bench",
+  "kind": "photo",
+  "origin": "enhanced#15",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "wardrobes-wardrobe-with-amber-glass-columns-1",
+  "folder": "wardrobes",
+  "title": "Wardrobe with amber glass columns",
+  "kind": "photo",
+  "origin": "enhanced#16",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "wardrobes-wardrobe-wall-with-study-desk-2",
+  "folder": "wardrobes",
+  "title": "Wardrobe wall with study desk",
+  "kind": "photo",
+  "origin": "enhanced#18",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-kitchen-with-backlit-mirror-and-basin-2",
+  "folder": "modular-kitchen",
+  "title": "Kitchen with backlit mirror and basin",
+  "kind": "photo",
+  "origin": "enhanced#19",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "bathrooms-twin-vanity-with-backlit-mirrors-3",
+  "folder": "bathrooms",
+  "title": "Twin vanity with backlit mirrors",
+  "kind": "photo",
+  "origin": "enhanced#21",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "wardrobes-full-height-wardrobe-run-3",
+  "folder": "wardrobes",
+  "title": "Full-height wardrobe run",
+  "kind": "photo",
+  "origin": "enhanced#22",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "wardrobes-wardrobe-with-study-and-lit-niche-4",
+  "folder": "wardrobes",
+  "title": "Wardrobe with study and lit niche",
+  "kind": "photo",
+  "origin": "enhanced#23",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "wardrobes-wardrobe-with-amber-glass-doors-5",
+  "folder": "wardrobes",
+  "title": "Wardrobe with amber glass doors",
+  "kind": "photo",
+  "origin": "enhanced#24",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "shelving-display-unit-and-fluted-panelling-2",
+  "folder": "shelving",
+  "title": "Display unit and fluted panelling",
+  "kind": "photo",
+  "origin": "enhanced#26",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "bathrooms-vanity-with-oval-backlit-mirror-4",
+  "folder": "bathrooms",
+  "title": "Vanity with oval backlit mirror",
+  "kind": "photo",
+  "origin": "enhanced#27",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "bathrooms-vanity-oval-mirror-and-stone-wall-5",
+  "folder": "bathrooms",
+  "title": "Vanity, oval mirror and stone wall",
+  "kind": "photo",
+  "origin": "enhanced#29",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-kitchen-with-marble-counter-and-tall-uni-3",
+  "folder": "modular-kitchen",
+  "title": "Kitchen with marble counter and tall units",
+  "kind": "photo",
+  "origin": "enhanced#32",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-breakfast-counter-with-laser-cut-screen-4",
+  "folder": "modular-kitchen",
+  "title": "Breakfast counter with laser-cut screen",
+  "kind": "render",
+  "origin": "enhanced#35",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "modular-cream-modular-kitchen-5",
+  "folder": "modular-kitchen",
+  "title": "Cream modular kitchen",
+  "kind": "render",
+  "origin": "enhanced#36",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "ongoing-ceiling-and-curtain-track-being-finished-8",
+  "folder": "ongoing-work",
+  "title": "Ceiling and curtain track being finished",
+  "kind": "ongoing",
+  "origin": "enhanced#40",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-breakfast-bar-and-partition-screen-6",
+  "folder": "modular-kitchen",
+  "title": "Breakfast bar and partition screen",
+  "kind": "render",
+  "origin": "enhanced#41",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "bathrooms-bathroom-with-dressing-niche-and-mosaic-6",
+  "folder": "bathrooms",
+  "title": "Bathroom with dressing niche and mosaic wall",
+  "kind": "render",
+  "origin": "enhanced#43",
+  "w": 1800,
+  "h": 1296
+ },
+ {
+  "slug": "bathrooms-marble-bathroom-with-tub-and-walk-in-sho-7",
+  "folder": "bathrooms",
+  "title": "Marble bathroom with tub and walk-in shower",
+  "kind": "render",
+  "origin": "enhanced#44",
+  "w": 1800,
+  "h": 1296
+ },
+ {
+  "slug": "bathrooms-stone-bathroom-with-freestanding-tub-8",
+  "folder": "bathrooms",
+  "title": "Stone bathroom with freestanding tub",
+  "kind": "render",
+  "origin": "enhanced#45",
+  "w": 1800,
+  "h": 950
+ },
+ {
+  "slug": "modular-kitchen-with-marble-backsplash-7",
+  "folder": "modular-kitchen",
+  "title": "Kitchen with marble backsplash",
+  "kind": "render",
+  "origin": "enhanced#46",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "bathrooms-oak-vanity-and-walk-in-shower-9",
+  "folder": "bathrooms",
+  "title": "Oak vanity and walk-in shower",
+  "kind": "render",
+  "origin": "enhanced#47",
+  "w": 1800,
+  "h": 1457
+ },
+ {
+  "slug": "modular-l-shaped-kitchen-with-dark-stone-counter-8",
+  "folder": "modular-kitchen",
+  "title": "L-shaped kitchen with dark stone counter",
+  "kind": "photo",
+  "origin": "enhanced#49",
+  "w": 1800,
+  "h": 1350
+ },
+ {
+  "slug": "living-entrance-passage-and-console-1",
+  "folder": "living-room",
+  "title": "Entrance passage and console",
+  "kind": "render",
+  "origin": "enhanced#50",
+  "w": 1800,
+  "h": 1749
+ },
+ {
+  "slug": "living-living-room-with-media-wall-2",
+  "folder": "living-room",
+  "title": "Living room with media wall",
+  "kind": "render",
+  "origin": "enhanced#51",
+  "w": 1800,
+  "h": 1385
+ },
+ {
+  "slug": "modular-green-kitchen-with-patterned-marble-floo-9",
+  "folder": "modular-kitchen",
+  "title": "Green kitchen with patterned marble floor",
+  "kind": "photo",
+  "origin": "enhanced#53",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-kitchen-with-rose-breakfast-island-10",
+  "folder": "modular-kitchen",
+  "title": "Kitchen with rose breakfast island",
+  "kind": "render",
+  "origin": "enhanced#54",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "living-open-living-and-kitchen-view-3",
+  "folder": "living-room",
+  "title": "Open living and kitchen view",
+  "kind": "render",
+  "origin": "enhanced#55",
+  "w": 1800,
+  "h": 1199
+ },
+ {
+  "slug": "living-dining-with-sculpted-wall-niches-4",
+  "folder": "living-room",
+  "title": "Dining with sculpted wall niches",
+  "kind": "render",
+  "origin": "enhanced#56",
+  "w": 1600,
+  "h": 1232
+ },
+ {
+  "slug": "modular-rose-kitchen-with-island-counter-11",
+  "folder": "modular-kitchen",
+  "title": "Rose kitchen with island counter",
+  "kind": "render",
+  "origin": "enhanced#57",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "modular-kitchen-with-glazed-upper-units-12",
+  "folder": "modular-kitchen",
+  "title": "Kitchen with glazed upper units",
+  "kind": "render",
+  "origin": "enhanced#58",
+  "w": 1800,
+  "h": 1385
+ },
+ {
+  "slug": "bathrooms-vanity-with-sculpted-niche-wall-10",
+  "folder": "bathrooms",
+  "title": "Vanity with sculpted niche wall",
+  "kind": "render",
+  "origin": "enhanced#59",
+  "w": 1800,
+  "h": 1385
+ },
+ {
+  "slug": "living-dining-room-with-oval-mirror-5",
+  "folder": "living-room",
+  "title": "Dining room with oval mirror",
+  "kind": "render",
+  "origin": "enhanced#60",
+  "w": 1800,
+  "h": 1385
+ },
+ {
+  "slug": "living-living-room-with-panelled-feature-wall-6",
+  "folder": "living-room",
+  "title": "Living room with panelled feature wall",
+  "kind": "render",
+  "origin": "enhanced#61",
+  "w": 1800,
+  "h": 1385
+ },
+ {
+  "slug": "modular-green-kitchen-with-stone-flooring-13",
+  "folder": "modular-kitchen",
+  "title": "Green kitchen with stone flooring",
+  "kind": "photo",
+  "origin": "enhanced#63",
+  "w": 1800,
+  "h": 2400
+ },
+ {
+  "slug": "modular-rose-kitchen-and-breakfast-island-14",
+  "folder": "modular-kitchen",
+  "title": "Rose kitchen and breakfast island",
+  "kind": "render",
+  "origin": "enhanced#64",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "modular-rose-kitchen-island-detail-15",
+  "folder": "modular-kitchen",
+  "title": "Rose kitchen, island detail",
+  "kind": "render",
+  "origin": "enhanced#65",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "bedrooms-bedroom-with-study-and-wardrobe-1",
+  "folder": "bedrooms",
+  "title": "Bedroom with study and wardrobe",
+  "kind": "render",
+  "origin": "enhanced#66",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "bedrooms-bedroom-with-panelled-wall-2",
+  "folder": "bedrooms",
+  "title": "Bedroom with panelled wall",
+  "kind": "render",
+  "origin": "enhanced#67",
+  "w": 1800,
+  "h": 1012
+ },
+ {
+  "slug": "bathrooms-marble-vanity-and-backlit-mirror-11",
+  "folder": "bathrooms",
+  "title": "Marble vanity and backlit mirror",
+  "kind": "photo",
+  "origin": "original/1.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "bathrooms-oval-backlit-mirror-and-basin-12",
+  "folder": "bathrooms",
+  "title": "Oval backlit mirror and basin",
+  "kind": "photo",
+  "origin": "original/1.1.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "shelving-floating-shelf-and-lit-niche-3",
+  "folder": "shelving",
+  "title": "Floating shelf and lit niche",
+  "kind": "photo",
+  "origin": "original/10.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "living-layered-ceiling-with-cove-lighting-7",
+  "folder": "living-room",
+  "title": "Layered ceiling with cove lighting",
+  "kind": "photo",
+  "origin": "original/11.png",
+  "w": 1156,
+  "h": 1361
+ },
+ {
+  "slug": "wardrobes-tall-units-with-glazed-doors-6",
+  "folder": "wardrobes",
+  "title": "Tall units with glazed doors",
+  "kind": "photo",
+  "origin": "original/13.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "wardrobes-wardrobe-wall-with-fitted-desk-7",
+  "folder": "wardrobes",
+  "title": "Wardrobe wall with fitted desk",
+  "kind": "photo",
+  "origin": "original/2.png",
+  "w": 1448,
+  "h": 1086
+ },
+ {
+  "slug": "living-media-wall-in-marble-and-fluted-oak-8",
+  "folder": "living-room",
+  "title": "Media wall in marble and fluted oak",
+  "kind": "photo",
+  "origin": "original/3.png",
+  "w": 1374,
+  "h": 1145
+ },
+ {
+  "slug": "living-stone-feature-wall-and-cove-ceiling-9",
+  "folder": "living-room",
+  "title": "Stone feature wall and cove ceiling",
+  "kind": "photo",
+  "origin": "original/4.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "living-living-room-with-dark-feature-wall-10",
+  "folder": "living-room",
+  "title": "Living room with dark feature wall",
+  "kind": "photo",
+  "origin": "original/4.1.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "modular-modular-kitchen-run-with-marble-counter-16",
+  "folder": "modular-kitchen",
+  "title": "Modular kitchen run with marble counter",
+  "kind": "photo",
+  "origin": "original/5.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "modular-modular-kitchen-and-vanity-suite-17",
+  "folder": "modular-kitchen",
+  "title": "Modular kitchen and vanity suite",
+  "kind": "photo",
+  "origin": "original/5.1.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "shelving-display-unit-with-fluted-panelling-4",
+  "folder": "shelving",
+  "title": "Display unit with fluted panelling",
+  "kind": "photo",
+  "origin": "original/7.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "wardrobes-fitted-desk-and-amber-glass-8",
+  "folder": "wardrobes",
+  "title": "Fitted desk and amber glass",
+  "kind": "photo",
+  "origin": "original/8.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "ongoing-timber-partition-and-wardrobe-carcass-9",
+  "folder": "ongoing-work",
+  "title": "Timber partition and wardrobe carcass",
+  "kind": "ongoing",
+  "origin": "original/14.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "ongoing-corner-joinery-under-installation-10",
+  "folder": "ongoing-work",
+  "title": "Corner joinery under installation",
+  "kind": "ongoing",
+  "origin": "original/15.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "ongoing-open-shelving-and-bench-at-carcass-stage-11",
+  "folder": "ongoing-work",
+  "title": "Open shelving and bench at carcass stage",
+  "kind": "ongoing",
+  "origin": "original/16.png",
+  "w": 1086,
+  "h": 1448
+ },
+ {
+  "slug": "living-living-room-seating-and-window-wall-11",
+  "folder": "living-room",
+  "title": "Living room \u2014 seating and window wall",
+  "kind": "render",
+  "origin": "original/LR1.jpeg",
+  "w": 974,
+  "h": 594
+ },
+ {
+  "slug": "living-living-room-sofa-and-media-wall-12",
+  "folder": "living-room",
+  "title": "Living room \u2014 sofa and media wall",
+  "kind": "render",
+  "origin": "original/LR2.jpeg",
+  "w": 974,
+  "h": 594
+ },
+ {
+  "slug": "living-living-room-drapes-and-wall-sconces-13",
+  "folder": "living-room",
+  "title": "Living room \u2014 drapes and wall sconces",
+  "kind": "render",
+  "origin": "original/LR3.jpeg",
+  "w": 974,
+  "h": 594
+ },
+ {
+  "slug": "living-living-room-storage-wall-and-niches-14",
+  "folder": "living-room",
+  "title": "Living room \u2014 storage wall and niches",
+  "kind": "render",
+  "origin": "original/LR4.jpeg",
+  "w": 981,
+  "h": 601
+ },
+ {
+  "slug": "living-living-room-textured-feature-wall-15",
+  "folder": "living-room",
+  "title": "Living room \u2014 textured feature wall",
+  "kind": "render",
+  "origin": "original/LR5.jpeg",
+  "w": 981,
+  "h": 601
+ },
+ {
+  "slug": "modular-modular-kitchen-corner-layout-18",
+  "folder": "modular-kitchen",
+  "title": "Modular kitchen \u2014 corner layout",
+  "kind": "render",
+  "origin": "original/MK4.jpeg",
+  "w": 1439,
+  "h": 809
+ }
+]

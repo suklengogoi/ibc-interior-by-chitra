@@ -1,0 +1,285 @@
+/* =========================================================================
+   IBC — portfolio document
+   Every page is a true A4 landscape sheet (297 x 210 mm). The screen view and
+   the printed PDF use the same boxes, so the download can never drift away
+   from what the visitor scrolled through.
+   ========================================================================= */
+
+.pf-body {
+  background: #d9d3c7;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------ top bar */
+.pf-bar {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: .7rem clamp(.9rem, 3vw, 2rem);
+  background: rgba(246, 242, 234, .95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.pf-bar__brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: inherit; }
+.pf-bar__brand span { font-family: var(--display); font-size: 1.2rem; line-height: 1; }
+.pf-bar__brand small {
+  display: block; font-family: var(--sans); font-size: .5rem;
+  letter-spacing: .3em; text-transform: uppercase; opacity: .6; margin-top: .3em;
+}
+.pf-bar__nav { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.pf-bar__nav a {
+  font-size: .64rem; letter-spacing: .18em; text-transform: uppercase;
+  text-decoration: none; padding: .7em 1.05em; border-radius: 999px;
+  border: 1px solid var(--rule); color: inherit; min-height: 2.4rem;
+  display: inline-flex; align-items: center; gap: .5em;
+  transition: background .35s var(--ease), border-color .35s var(--ease);
+}
+.pf-bar__nav a:hover { border-color: currentColor; }
+/* written as .pf-bar__nav a.pf-bar__dl so it outranks the `color: inherit`
+   on the sibling rule above — otherwise the label is ink on ink and the
+   main call to action reads as a blank black pill */
+.pf-bar__nav a.pf-bar__dl {
+  background: var(--ink); color: var(--ivory); border-color: var(--ink);
+}
+.pf-bar__nav a.pf-bar__dl:hover { background: var(--walnut); border-color: var(--walnut); }
+
+/* --------------------------------------------------------- the document */
+.pf-doc {
+  display: grid; gap: clamp(.8rem, 2.4vw, 1.8rem);
+  padding: clamp(.8rem, 2.4vw, 2rem) clamp(.5rem, 2vw, 1.5rem) 1rem;
+  justify-items: center;
+}
+
+/* one A4 landscape sheet; it scales down on small screens without reflowing,
+   so a phone shows the same page the PDF will print */
+.pf-page {
+  position: relative;
+  width: 297mm; height: 210mm;
+  flex: none;
+  background: var(--ivory);
+  color: var(--ink);
+  padding: 15mm 16mm 12mm;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(26, 24, 21, .16);
+  display: flex; flex-direction: column;
+  transform-origin: top center;
+}
+
+.pf-page h2 {
+  font-family: var(--display); font-weight: 400;
+  font-size: 30pt; line-height: 1.02; letter-spacing: -.015em; margin: 0 0 5mm;
+}
+.pf-page h3 { font-family: var(--display); font-weight: 400; font-size: 13pt; margin: 0 0 1.5mm; }
+.pf-page p { font-size: 9pt; line-height: 1.6; margin: 0 0 3mm; }
+.pf-kicker {
+  font-size: 6.5pt; letter-spacing: .3em; text-transform: uppercase;
+  opacity: .62; margin: 0 0 4mm !important; display: flex; align-items: center; gap: .9em;
+}
+.pf-kicker::before { content: ''; width: 12mm; height: 1px; background: var(--brass); }
+.pf-lede { font-size: 10.5pt !important; line-height: 1.55 !important; }
+
+.pf-foot {
+  margin-top: auto; padding-top: 3mm; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 6.5pt; letter-spacing: .18em; text-transform: uppercase; opacity: .55;
+}
+
+/* ------------------------------------------------------------- cover */
+.pf-cover { padding: 0; flex-direction: row; }
+.pf-cover__img { flex: 1 1 58%; position: relative; overflow: hidden; background: var(--ink); }
+.pf-cover__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pf-cover__panel {
+  flex: 0 0 42%; padding: 18mm 14mm 14mm; display: flex; flex-direction: column;
+  background: var(--ivory);
+  background-image: repeating-linear-gradient(90deg,
+    rgba(26,24,21,.035) 0 1px, transparent 1px 13px);
+}
+.pf-cover__mark { width: 26mm; height: auto; margin-bottom: 10mm; }
+.pf-cover h1 {
+  font-family: var(--display); font-weight: 400; font-size: 54pt;
+  line-height: .95; margin: 0 0 6mm; letter-spacing: -.02em;
+}
+.pf-cover__sub { font-size: 9.5pt !important; line-height: 1.6 !important; max-width: 62mm; opacity: .85; }
+.pf-cover__rule { width: 100%; height: 1px; background: var(--rule); margin: 8mm 0 0; }
+.pf-cover__meta { margin-top: auto; display: grid; gap: 3.5mm; }
+.pf-cover__meta div { display: grid; gap: .8mm; }
+.pf-cover__meta dt {
+  font-size: 6pt; letter-spacing: .24em; text-transform: uppercase; opacity: .5;
+}
+.pf-cover__meta dd { margin: 0; font-size: 9pt; }
+
+/* ------------------------------------------------------- studio page */
+.pf-split { display: grid; grid-template-columns: 80mm 1fr; gap: 12mm;
+  flex: 1; min-height: 0; align-items: stretch; }
+.pf-split > div:last-child { display: flex; flex-direction: column; }
+.pf-split .pf-facts { margin-top: auto; margin-bottom: 3mm; }
+.pf-portrait { margin: 0; display: flex; flex-direction: column; }
+.pf-portrait img {
+  width: 100%; flex: 1; min-height: 0; object-fit: cover;
+  object-position: center 38%; display: block;
+}
+.pf-portrait figcaption {
+  margin-top: 2.5mm; font-size: 6.5pt; letter-spacing: .2em;
+  text-transform: uppercase; opacity: .6;
+}
+.pf-quote {
+  margin: 7mm 0 0; padding-left: 6mm; border-left: 1px solid var(--brass);
+  font-family: var(--display); font-size: 15pt; line-height: 1.3;
+  max-width: 105mm; opacity: .9;
+}
+.pf-facts { margin: 6mm 0 0; display: grid; gap: 3mm; }
+.pf-facts div { display: grid; grid-template-columns: 32mm 1fr; gap: 3mm; align-items: baseline;
+  padding-top: 2.5mm; border-top: 1px solid var(--rule); }
+.pf-facts dt { font-size: 6.5pt; letter-spacing: .2em; text-transform: uppercase; opacity: .55; }
+.pf-facts dd { margin: 0; font-size: 9pt; }
+.pf-facts--lg div { grid-template-columns: 42mm 1fr; }
+.pf-facts--lg dd { font-size: 11pt; }
+
+/* ------------------------------------------- services and process pages */
+.pf-svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm 9mm; margin-top: 2mm; }
+.pf-svc__i span.num, .pf-proc__i span.num {
+  font-size: 6.5pt; letter-spacing: .22em; opacity: .45; display: block; margin-bottom: 2mm;
+}
+.pf-svc__i p, .pf-proc__i p { font-size: 8.5pt; line-height: 1.55; opacity: .85; }
+.pf-proc { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7mm; margin-top: 3mm; }
+.pf-proc__i { padding-top: 3mm; border-top: 1px solid var(--rule); }
+
+/* ------------------------------------------ full-bleed strip of three
+   Fills the foot of the short text pages. It bleeds to the paper edge on
+   three sides, which is what makes the sheet read as a printed document
+   rather than a page of text that ran out. */
+.pf-band {
+  margin: 0 -16mm; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; height: 74mm; background: var(--rule); flex: none;
+}
+.pf-band figure { margin: 0; position: relative; overflow: hidden; background: var(--bone); }
+.pf-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* the page footer belongs above the strip, so the strip can run off the
+   bottom edge of the paper */
+.pf-page--band { padding-bottom: 0; }
+.pf-page--band .pf-band { order: 2; }
+/* the auto margin sits on the footer so the footer and the strip travel to
+   the bottom of the sheet together, instead of the footer stranding
+   mid-page with the gap below it */
+.pf-page--band .pf-foot { order: 1; margin-top: auto; padding-bottom: 3mm; }
+
+/* ---------------------------------------------------- section divider */
+.pf-page--divider { padding: 0; }
+.pf-page--divider .pf-foot {
+  position: absolute; right: 14mm; bottom: 9mm; margin: 0;
+  width: calc(40% - 28mm); background: var(--bone);
+}
+.pf-divider { display: flex; height: 100%; }
+.pf-divider__img { flex: 1 1 60%; position: relative; overflow: hidden; background: var(--bone); }
+.pf-divider__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pf-divider__txt {
+  flex: 0 0 40%; padding: 20mm 14mm 20mm; display: flex; flex-direction: column;
+  justify-content: center; background: var(--bone);
+}
+.pf-divider__txt h2 { font-size: 34pt; }
+.pf-count {
+  margin-top: 4mm !important; font-size: 6.5pt; letter-spacing: .24em;
+  text-transform: uppercase; opacity: .55;
+}
+
+/* -------------------------------------------------------- image grids */
+.pf-gridhead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 3mm; margin-bottom: 5mm; border-bottom: 1px solid var(--rule);
+}
+.pf-gridhead h3 { margin: 0; font-size: 17pt; }
+.pf-gridhead .num { font-size: 6.5pt; letter-spacing: .22em; text-transform: uppercase; opacity: .5; }
+
+.pf-grid { display: grid; gap: 5mm; flex: 1; min-height: 0; }
+.pf-grid--1 { grid-template-columns: 1fr; }
+.pf-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.pf-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.pf-grid--4 { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+.pf-grid--5, .pf-grid--6 { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); }
+
+.pf-cell { margin: 0; position: relative; display: flex; flex-direction: column; min-height: 0; }
+.pf-cell img {
+  width: 100%; flex: 1; min-height: 0; object-fit: cover; display: block; background: var(--bone);
+}
+.pf-cell figcaption {
+  margin-top: 2mm; font-size: 6.5pt; letter-spacing: .06em; opacity: .7;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.pf-tag {
+  position: absolute; top: 2.5mm; left: 2.5mm; z-index: 2;
+  font-size: 5.5pt; letter-spacing: .18em; text-transform: uppercase;
+  background: rgba(12, 11, 9, .68); color: var(--ivory);
+  padding: .5em .8em; border-radius: 999px;
+}
+
+/* ------------------------------------------------------- contact page */
+/* the closing sheet mirrors the cover: a full-height image against a panel of
+   text, so the document opens and shuts on the same note */
+.pf-page--contact { padding: 0; }
+.pf-page--contact .pf-foot {
+  position: absolute; left: 16mm; bottom: 9mm; margin: 0;
+  width: calc(56% - 32mm);
+}
+.pf-contact { display: flex; flex: 1; min-height: 0; }
+.pf-contact__panel {
+  flex: 0 0 56%; padding: 18mm 16mm 20mm; display: flex; flex-direction: column;
+}
+.pf-contact__panel .pf-facts { margin-top: 8mm; }
+.pf-contact__img { margin: 0; flex: 1 1 44%; overflow: hidden; background: var(--bone); }
+.pf-contact__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pf-note {
+  margin-top: 6mm !important; padding-top: 3mm; border-top: 1px solid var(--rule);
+  font-size: 7.5pt !important; opacity: .65; max-width: 95mm;
+}
+
+/* ------------------------------------------------------------- footer */
+.pf-end {
+  display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center;
+  padding: 1.5rem 1rem 3rem; margin: 0;
+}
+
+/* ================================================= screen scaling only
+   An A4 sheet is 1122px wide and will not fit most screens. It is scaled
+   rather than reflowed, so what the visitor scrolls is exactly what the PDF
+   prints.
+
+   This uses `zoom`, not `transform: scale()`. A transform changes only how
+   the sheet is painted — it still occupies its full 1122px in the layout, so
+   the page keeps a horizontal scrollbar on every phone and tablet. `zoom`
+   changes the layout box too, which is the whole point here. */
+@media screen and (max-width: 1180px) { .pf-page { zoom: .80; } }
+@media screen and (max-width:  980px) { .pf-page { zoom: .72; } }
+@media screen and (max-width:  900px) { .pf-page { zoom: .66; } }
+@media screen and (max-width:  830px) { .pf-page { zoom: .60; } }
+@media screen and (max-width:  768px) { .pf-page { zoom: .56; } }
+@media screen and (max-width:  680px) { .pf-page { zoom: .48; } .pf-doc { padding-inline: .4rem; gap: .5rem; } }
+@media screen and (max-width:  560px) { .pf-page { zoom: .40; } }
+@media screen and (max-width:  480px) { .pf-page { zoom: .34; } }
+@media screen and (max-width:  400px) { .pf-page { zoom: .29; } }
+@media screen and (max-width:  360px) { .pf-page { zoom: .26; } }
+
+/* A browser without `zoom` keeps full-size sheets; let it pan rather than
+   clip them. */
+@supports not (zoom: 1) {
+  .pf-doc { overflow-x: auto; justify-items: start; }
+}
+
+/* ====================================================== print / PDF */
+@page { size: A4 landscape; margin: 0; }
+
+@media print {
+  .pf-bar, .pf-end, .wa { display: none !important; }
+  .pf-body { background: #fff; }
+  .pf-doc { display: block; padding: 0; gap: 0; }
+  .pf-page {
+    zoom: 1 !important; transform: none !important; margin: 0 !important;
+    box-shadow: none; break-after: page; page-break-after: always;
+    width: 297mm; height: 210mm;
+  }
+  .pf-page:last-child { break-after: auto; page-break-after: auto; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pf-bar__nav a { transition: none; }
+}

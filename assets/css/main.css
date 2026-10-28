@@ -828,3 +828,88 @@ body.folder-open { overflow: hidden; }
 .nojs-note { display: none; }
 
 @media print { .hdr, .wa, .menu, .hero__bar { display: none; } }
+
+/* ===================================================== 03 — The portfolio
+   The portfolio document used to be reachable only from a nav link, which is
+   the easiest thing on a page to miss. It now has a section of its own,
+   placed right after Selected Work: the moment someone has finished looking
+   at rooms is the moment to hand them the whole document. */
+.pfp-sec { background: var(--bone); }
+.pfp {
+  display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: clamp(2rem, 5vw, 5rem); align-items: center; margin-top: 2.4rem;
+}
+.pfp__txt { min-width: 0; }
+.pfp__facts {
+  margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: 0 clamp(1.4rem, 3vw, 2.8rem);
+}
+.pfp__facts div { padding-top: .7rem; border-top: 1px solid var(--rule); min-width: 7rem; }
+.pfp__facts dt {
+  font-size: .62rem; letter-spacing: .24em; text-transform: uppercase; opacity: .55;
+}
+.pfp__facts dd { margin: .35rem 0 0; font-family: var(--display); font-size: 1.45rem; }
+.pfp__cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 2.2rem; }
+
+/* the stack of sheets — three real pages of the document, fanned */
+.pfp__sheets {
+  position: relative; display: block; aspect-ratio: 1305 / 1030;
+  text-decoration: none; color: inherit; perspective: 1400px;
+  /* the fan is rotated, so its corners reach past the image boxes; the
+     padding keeps the whole stack inside the column instead of clipping */
+  padding: 3% 4%;
+}
+.pfp__sheet {
+  position: absolute; height: auto; display: block;
+  border: 1px solid var(--rule);
+  box-shadow: 0 18px 44px rgba(26, 24, 21, .20);
+  transition: transform .75s var(--slow), box-shadow .75s var(--slow);
+  will-change: transform;
+}
+.pfp__sheet--3 { top: 2%;   right: 4%;  width: 82%; transform: rotate(4.5deg); }
+.pfp__sheet--2 { top: 9%;   right: 9%;  width: 82%; transform: rotate(1.8deg); }
+.pfp__sheet--1 { top: 16%;  right: 14%; width: 82%; transform: rotate(-1.4deg); }
+
+/* on hover the stack opens, so it reads as a document you can go through */
+.pfp__sheets:hover .pfp__sheet--3,
+.pfp__sheets:focus-visible .pfp__sheet--3 { transform: rotate(7deg) translate(4%, -5%); }
+.pfp__sheets:hover .pfp__sheet--2,
+.pfp__sheets:focus-visible .pfp__sheet--2 { transform: rotate(2.6deg) translate(1%, -1%); }
+.pfp__sheets:hover .pfp__sheet--1,
+.pfp__sheets:focus-visible .pfp__sheet--1 {
+  transform: rotate(-2.4deg) translate(-4%, 3%);
+  box-shadow: 0 26px 60px rgba(26, 24, 21, .28);
+}
+.pfp__sheets:focus-visible { outline: 2px solid var(--walnut); outline-offset: 10px; }
+
+.pfp__badge {
+  position: absolute; left: 0; bottom: 2%; z-index: 3;
+  background: var(--ink); color: var(--ivory);
+  font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+  padding: .75em 1.15em; border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .pfp { grid-template-columns: 1fr; gap: 2.4rem; }
+  .pfp__sheets { order: -1; aspect-ratio: 1305 / 1010; }
+  .pfp__cta .btn { flex: 1 1 14rem; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pfp__sheet { transition: none; }
+  .pfp__sheets:hover .pfp__sheet--1,
+  .pfp__sheets:hover .pfp__sheet--2,
+  .pfp__sheets:hover .pfp__sheet--3 { transform: none; }
+  .pfp__sheet--1 { transform: none; }
+  .pfp__sheet--2, .pfp__sheet--3 { display: none; }
+}
+
+/* the nav link to the portfolio is the one thing in the bar that is not a
+   plain word — it is the page the client most wants people to reach */
+.hdr__nav-pf {
+  position: relative;
+  padding-left: 1.15em !important;
+}
+.hdr__nav-pf::before {
+  content: ''; position: absolute; left: .1em; top: 50%;
+  width: .4em; height: .4em; margin-top: -.2em; border-radius: 50%;
+  background: var(--brass);
+}
